@@ -1,0 +1,36 @@
+<div class="container mt-3 p-0">
+    <table>
+        {{#if movie}}
+        <tr><td>
+            ID : {{{movie.tvid}}}
+        </td></tr>
+        <tr><td>
+            Title : {{{movie.name}}}
+        </td></tr>
+        <tr><td>
+            Language : {{{movie.lang}}}
+        </td></tr>
+        <tr><td>
+            Official site : <a href="{{movie.official_site}}">{{movie.official_site}}</a>
+        </td></tr>
+        <tr><td>
+            Rating : {{{movie.rating}}}
+        </td></tr>
+        <tr><td>
+            <img src="{{{movie.image}}}" alt="">
+        </td></tr>
+        <tr><td>
+            Summary : {{{movie.summary}}}
+        </td></tr>
+        {{else}}
+        <h1>No results for that movie id.</h1>
+        {{/if}}
+
+    
+    </table>
+</div>
+<div class="container mt-3 mb-3">
+    <form action="/" method="GET">
+        <button class="btn btn-outline-primary btn-lg" type="submit">Back!</button>
+    </form>
+</div>
